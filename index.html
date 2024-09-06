@@ -23,7 +23,7 @@
             justify-content: flex-start;
             margin: 20px;
         }
-        .left-block {
+        .left-block, .right-block {
             background-color: #fff;
             padding: 15px;
             border-radius: 10px;
@@ -31,13 +31,14 @@
             width: 30%;
             height: auto;
             margin-top: 20px;
+            margin-right: 20px;
         }
-        .left-block h2 {
+        .left-block h2, .right-block h2 {
             font-size: 1.5em;
             color: #333;
             margin-bottom: 5px;
         }
-        .left-block p {
+        .left-block p, .right-block p {
             font-size: 1.1em;
             color: #555;
         }
@@ -83,7 +84,7 @@
 
     <!-- Portfolio Section -->
     <div class="portfolio-container">
-        <!-- Left Block with Image and Text -->
+        <!-- Left Block with Hover Effect -->
         <div class="left-block">
             <!-- Small changing image with hover effect -->
             <div class="image-container">
@@ -96,6 +97,17 @@
 
             <h2>Ibrahim Salman</h2>
             <p>I am a gymnast who has been playing for over 8 years and have won around 9 medals.</p>
+        </div>
+
+        <!-- Right Block with New Images -->
+        <div class="right-block">
+            <!-- First Show Image -->
+            <img src="Firstone.jpeg" alt="First Show" style="width: 100%; height: auto; border-radius: 10px;">
+            <p>This was my first show at 9 years old.</p>
+
+            <!-- Last Show Image -->
+            <img src="Meonstage.jpeg" alt="Last Show" style="width: 100%; height: auto; border-radius: 10px;">
+            <p>This was my last show at 10 years old.</p>
         </div>
     </div>
 
