@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim Salman's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .top-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: 50% 40%;
+        }
+        .portfolio-container {
+            display: flex;
+            justify-content: flex-start;
+            margin: 20px;
+        }
+        .left-block {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            height: auto;
+            margin-top: 20px;
+        }
+        .left-block h2 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .left-block p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* Image hover effect */
+        .image-container {
+            position: relative;
+            width: 250px; /* Smaller size for the hover effect image */
+            height: auto;
+        }
+
+        /* The default image to be shown */
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: opacity 0.5s ease;
+        }
+
+        /* This hides the second image */
+        .image-container img.second {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        /* When hovering over the container, hide the first image and show the second */
+        .image-container:hover img.first {
+            opacity: 0;
+        }
+
+        .image-container:hover img.second {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Top Image Section -->
+    <img src="Ibrahim.jpeg" alt="Ibrahim Salman" class="top-image">
+
+    <!-- Portfolio Section -->
+    <div class="portfolio-container">
+        <!-- Left Block with Image and Text -->
+        <div class="left-block">
+            <!-- Small changing image with hover effect -->
+            <div class="image-container">
+                <!-- First Image -->
+                <img src="My captin.jpeg" alt="Ibrahim and Captain" class="first">
+                
+                <!-- Second Image -->
+                <img src="Ibrahim gym.jpeg" alt="Ibrahim in Gym" class="second">
+            </div>
+
+            <h2>Ibrahim Salman</h2>
+            <p>I am a gymnast who has been playing for over 8 years and have won around 9 medals.</p>
+        </div>
+    </div>
+
+</body>
+</html>
