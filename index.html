@@ -10,137 +10,195 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-        }
-        /* Top image styling */
-        .top-image {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            object-position: 50% 30%;
-        }
-        .portfolio-container {
             display: flex;
-            justify-content: flex-start;
-            margin: 20px;
-        }
-        .left-block, .right-block {
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            width: 15%;
-            height: auto;
-            margin-top: 20px;
-            margin-right: 20px;
-            text-align: center;
-            position: relative; /* Required for positioning text */
-        }
-        .left-block h2, .right-block h2 {
-            font-size: 1.3em;
-            color: #333;
-            margin-bottom: 5px;
-        }
-        .left-block p, .right-block p {
-            font-size: 1em;
-            color: #555;
-            transition: opacity 0.5s ease;
-            position: absolute; /* Ensures text overlaps and changes with the image */
-            bottom: 10px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: 100%;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        /* Image hover effect styling */
         .image-container {
             position: relative;
-            width: 130px;
-            height: 180px;
-            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
         }
 
-        /* Default image (first one) */
         .image-container img {
             width: 100%;
             height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .name-left, .name-right {
+            position: absolute;
+            top: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .name-left {
+            left: 10px;
+        }
+
+        .name-right {
+            right: 10px;
+        }
+
+        .portfolio-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr; /* Adjusted to 4 columns */
+            grid-gap: 20px;
+            justify-items: center;
+            margin: 20px;
+        }
+
+        .left-block, .right-block, .chess-block, .tech-block, .swim-block, .social-block {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 150px;
+            text-align: center;
+            position: relative;
+        }
+
+        .swim-block img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .hover-image-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .hover-image-container img {
+            width: 100%;
+            height: 120px;
             border-radius: 10px;
             transition: opacity 0.5s ease;
         }
 
-        /* Second image hidden initially */
-        .image-container img.second {
+        .hover-image-container img.second {
             position: absolute;
             top: 0;
             left: 0;
             opacity: 0;
         }
 
-        /* Hover effect */
-        .image-container:hover img.first {
+        .hover-image-container:hover img.first {
             opacity: 0;
         }
 
-        .image-container:hover img.second {
+        .hover-image-container:hover img.second {
             opacity: 1;
         }
 
-        /* Text change on hover for the right block */
-        .right-block p.default-text {
-            opacity: 1;
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
         }
 
-        .right-block p.hover-text {
-            opacity: 0;
+        .footer p {
+            margin: 0;
         }
 
-        .right-block:hover p.default-text {
-            opacity: 0;
+        /* Social Media Container */
+        .social-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
         }
 
-        .right-block:hover p.hover-text {
-            opacity: 1;
+        .social-block img {
+            width: 40px;
+            height: 40px;
+            margin: 10px 0;
         }
 
     </style>
 </head>
 <body>
 
-    <!-- Top Image Section -->
-    <img src="Ibrahim.jpeg" alt="Ibrahim Salman" class="top-image">
+    <div class="image-container">
+        <img src="Ibrahim.jpeg" alt="Ibrahim Salman">
+    </div>
+    <p style="text-align:center; font-weight:bold; font-size: 150%;">Ibrahim Salman</p>
 
-    <!-- Portfolio Section -->
     <div class="portfolio-container">
         <!-- Left Block with Hover Effect -->
         <div class="left-block">
-            <!-- Small changing image with hover effect -->
-            <div class="image-container">
-                <!-- First Image (Default) -->
+            <div class="hover-image-container">
                 <img src="My captin.jpeg" alt="Ibrahim and Captain" class="first">
-                
-                <!-- Second Image (On Hover) -->
                 <img src="Ibrahim gym.jpeg" alt="Ibrahim in Gym" class="second">
             </div>
-
-            <h2>Ibrahim Salman</h2>
             <p>I am a gymnast who has been playing for over 8 years and have won around 9 medals.</p>
         </div>
 
-        <!-- Right Block with Hover Effect and Text Change -->
+        <!-- Chess Block -->
+        <div class="chess-block">
+            <div class="hover-image-container">
+                <img src="Chess.jpeg" alt="Playing Chess" class="first">
+                <img src="Chess prize.jpeg" alt="Receiving Chess Prize" class="second">
+            </div>
+            <p class="default-text">I am a Chess Player with an Elo rating of 1777 in tournaments.</p>
+            <p class="hover-text">This is me taking the prize.</p>
+        </div>
+
+        <!-- Right Block with Hover Effect -->
         <div class="right-block">
-            <!-- Small changing image with hover effect -->
-            <div class="image-container">
-                <!-- First Image (Default) -->
+            <div class="hover-image-container">
                 <img src="Firstone.jpeg" alt="First Show" class="first">
-                
-                <!-- Second Image (On Hover) -->
                 <img src="Meonstage.jpeg" alt="Last Show" class="second">
             </div>
-
-            <!-- Text that changes on hover -->
-            <p class="default-text">This was my first show at 9 years old.</p>
-            <p class="hover-text">This was my last show at 10 years old.</p>
+            <p class="default-text">One of my hobbies is acting. This was my first show at 9 years old.</p>
+            <p class="hover-text">This was my last show this year.</p>
         </div>
+
+        <!-- Tech Block -->
+        <div class="tech-block">
+            <div class="hover-image-container">
+                <img src="Gammal Tech.jpeg" alt="On Gammal Tech Front Page" class="first">
+                <img src="Me coding.jpeg" alt="Coding a Big Project" class="second">
+            </div>
+            <p class="default-text">This is me on the front of the Gammal Tech page at 8 years old.</p>
+            <p class="hover-text">Currently, I am enrolled in Gammal Tech's volunteering program.</p>
+        </div>
+
+        <!-- Swim Block -->
+        <div class="swim-block">
+            <img src="Me at swim.jpeg" alt="Swimming at 7 years old">
+            <p>I love sports, and I practice swimming besides gymnastics.</p>
+        </div>
+
+        <!-- Social Media Block -->
+<!-- Social Media Block -->
+<div class="social-block">
+    <h1>Follow me on</h1>
+    <p><a href="https://www.tiktok.com/@gammal.tech.cloud?_t=8pWYRtpn4AE&_r=1" target="_blank">TikTok</a></p>
+    <p><a href="https://youtube.com/@learningwithibrahim?si=Llsra-w7y-O2xrUb" target="_blank">YouTube</a></p>
+    <p><a href="https://x.com/learningibrahim?t=0WQRdW06N9vTiD4AIOYBlA&s=08" target="_blank">X</a></p>
+    <p><a href="https://www.instagram.com/ibrah_imsalman1?utm_source=qr&igsh=ZDl0dWV2eDFwMmph" target="_blank">Instagram</a></p>
+    <p><a href="https://www.facebook.com/share/EbNPoc58M3SRjt6g/?mibextid=qi2Omg" target="_blank">Facebook</a></p>
+</div>
+
+    </div>
+
+    <!-- Footer Contact Info -->
+    <div class="footer">
+        <p>Contact info: Email :Ibrahimalysalman@gmail.com</p>
     </div>
 
 </body>
