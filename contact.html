@@ -54,8 +54,13 @@
             <label for="message">Enter your Message</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
-            <button type="submit">Submit</button>
-            <alert>Message Sent</alert>
+            <button onclick="showAlert()">Subbmit</button>
+
+            <script>
+                function showAlert() {
+                    alert("message sent");
+                }
+            </script>
         </form>
     </div>
 
