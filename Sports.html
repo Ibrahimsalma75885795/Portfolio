@@ -52,11 +52,62 @@
         .home-button:hover {
             background-color: #555;
         }
+
+        /* Typing Animation */
+        .colorful-text span {
+            opacity: 0;
+            font-size: 3em;
+            font-weight: bold;
+            display: inline-block;
+            animation: fadeIn 1s forwards;
+        }
+
+        /* Animation for Fade In Effect */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Delays for Each Letter */
+        .colorful-text span:nth-child(1) {
+            animation-delay: 1s;
+            color: red;
+        }
+        .colorful-text span:nth-child(2) {
+            animation-delay: 2s;
+            color: orange;
+        }
+        .colorful-text span:nth-child(3) {
+            animation-delay: 3s;
+            color: yellow;
+        }
+        .colorful-text span:nth-child(4) {
+            animation-delay: 4s;
+            color: green;
+        }
+        .colorful-text span:nth-child(5) {
+            animation-delay: 5s;
+            color: blue;
+        }
+        .colorful-text span:nth-child(6) {
+            animation-delay: 6s;
+            color: purple;
+        }
+
     </style>
 </head>
 <body>
 
-    <h1>Sports</h1>
+    <!-- Typing Animation for "Sports" -->
+    <h1 class="colorful-text">
+        <span>S</span>
+        <span>p</span>
+        <span>o</span>
+        <span>r</span>
+        <span>t</span>
+        <span>s</span>
+    </h1>
 
     <!-- Container for portfolio items -->
     <div class="portfolio-container">
@@ -68,7 +119,7 @@
 
         <!-- Swimming Block -->
         <div class="portfolio-item">
-            <img src="Me at swim.jpeg" alt="Swimming">
+            <img src="Ibrahim.jpeg" alt="Swimming">
             <p>Swimming is another passion of mine, which I practice alongside gymnastics.</p>
         </div>
     </div>
