@@ -1,0 +1,25 @@
+/* Keyframes for the fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Styling for input fields and textareas */
+input[type="text"], textarea {
+  border: 2px solid #00b4d8; /* Light blue border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 12px; /* Inner padding for spacing */
+  font-size: 16px; /* Adjust text size */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus effect */
+  animation: fadeIn 2s ease-in-out; /* Apply fade-in animation */
+}
+
+/* Focused state: change border color and add glow */
+input[type="text"]:focus, textarea:focus {
+  border-color: #0077b6; /* Darker blue border when focused */
+  box-shadow: 0 0 8px rgba(0, 119, 182, 0.6); /* Glowing effect */
+}
